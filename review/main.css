@@ -1,0 +1,9 @@
+/* 
+Variable
+:root{
+    --text-color: red;
+}
+h1{
+    --text-color: green;
+    color: var(--text-color);
+} */

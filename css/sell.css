@@ -1,0 +1,81 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),
+	url("buildings-1245953_1920.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	font-family: "Roboto",sans-serif;
+}
+article{
+	background: #f3f3f3;
+	min-height: 400px;
+	margin-top: 8px;
+	padding-bottom: 40px;
+}
+article h1{
+	text-align: center;
+	padding: 15px 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+	text-shadow: 5px 5px 5px #ccc;
+
+}
+footer{
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: #1e7ab1;
+	color: #fff;
+	font-size: 16px;
+}
+.table{
+	max-width: 667.5px;
+	background-color: white;
+	margin-top:15px;
+	margin-left: 300px ;
+}
+
+select{
+	width:20%;
+    padding: 5px 10px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 40%;
+}
+table, th,tr, td {
+	border:1px solid rgba(65,184,250,1.00);
+  	border-collapse: collapse;
+  	transition:0.8s ease;
+}
+td:hover{
+	color:red;
+}
+th,td {
+  padding: 8px 25px;
+  text-align: center;
+}
+input[type=number] {
+  width: 40%;
+  padding: 8px 10px;
+  margin: 8px 0; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+thead{
+	background-color:#6ae7a2
+}
+
+.sum{
+	color:red;
+}
