@@ -80,7 +80,9 @@ body.dark-theme {
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
-
+button.nav__link {
+  background: none;
+}
 /*========== Button Dark/Light ==========*/
 .nav__dark {
   display: flex;
@@ -1041,4 +1043,12 @@ input {
   .home__container, .home__img {
     height: 640px;
   }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
 }

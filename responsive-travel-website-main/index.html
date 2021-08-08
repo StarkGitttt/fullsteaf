@@ -14,7 +14,8 @@
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
-
+        <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
+        <link rel="stylesheet" href="assets/css/form.css">
         <title>Website Travel</title>
     </head>
     <body>
@@ -25,16 +26,26 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">Home</a>
+                            <a href="#home" class="nav__link active-link">Trang chủ</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#about" class="nav__link">About</a>
+                            <a href="#about" class="nav__link">Giới thiệu</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#discover" class="nav__link">Discover</a>
+                            <a href="#discover" class="nav__link">Khám phá</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#place" class="nav__link">Places</a>
+                            <a href="#place" class="nav__link">Địa điểm</a>
+                        </li>
+                        <li class="nav__item">
+                            <button href="assets/form/form-sign-up.php" class="nav__link js-sign-in">
+                                Đăng nhập
+                            </button>
+                        </li>
+                        <li class="nav__item">
+                            <button href="assets/form/form-sign-up.php" class="nav__link js-sign-up">
+                                Đăng ký
+                            </button>
                         </li>
                     </ul>
 
@@ -56,8 +67,8 @@
         <main class="main">
             <!--==================== HOME ====================-->
             <section class="home" id="home">
-                <img src="assets/img/home1.jpg" alt="" class="home__img">
-
+                <img src="assets/img/home1.jpg" alt="" class="home__img"
+                 >
                 <div class="home__container container grid">
                     <div class="home__data">
                         <span class="home__data-subtitle">Discover your place</span>
@@ -477,7 +488,211 @@
                 </div>
             </div>
         </footer>
+                <!-- Sign in Form -->
+                <div class="main-form2 js-main-form2">
+                    <form action="" method="POST" class="form" id="form-2">
+                        <div class="main-form-close2 js-main-form-close2">
+                            <i class="ti-close"></i>                
+                        </div>
+                      <h3 class="heading">Thành viên đăng nhập</h3>        
+                      <div class="spacer"></div>
+                  
+                      <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+                        <span class="form-message"></span>
+                      </div>
+                            
+                      <div class="form-group">
+                        <label for="password" class="form-label">Mật khẩu</label>
+                        <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                        <span class="form-message"></span>
+                      </div>
+        
+                      <button class="form-submit">Đăng ký</button>
 
+                      <div class="form-group line">
+                        <hr/>
+                        <div class="not-member">
+                            <div class="not-member-icon ">
+                                <i class="ti-google brand-icon"></i>
+                                <i class="ti-twitter-alt brand-icon"></i>
+                                <i class="ti-facebook brand-icon"></i>
+                            </div>
+                            <div class="not-member-link">
+                                <a href="#" class="link-sign-up">Bạn chưa có tài khoản</a>
+                            </div>
+                           
+                        </div>
+                       
+                      </div>
+                    </form>                   
+                </div>
+                <!-- Sign Up Form -->
+                <div class="main-form js-main-form">
+                    <form action="" method="POST" class="form" id="form-1">
+                        <div class="main-form-close js-main-form-close">
+                            <i class="ti-close"></i>                
+                        </div>
+                      <h3 class="heading">Thành viên đăng ký</h3>        
+                      <div class="spacer"></div>
+                
+                      <div class="form-group">
+                        <label for="fullname" class="form-label">Tên đầy đủ</label>
+                        <input id="fullname" name="fullname" type="text" placeholder="VD: Phan Tấn Lộc" class="form-control">
+                        <span class="form-message"></span>
+                      </div>
+                  
+                      <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+                        <span class="form-message"></span>
+                      </div>
+              
+                      <!-- <div class="form-group">
+                        <label for="province" class="form-label">Tỉnh/TP</label>
+                        <select id="province" name="province" class="form-control">
+                          <option value="">-- Quốc tịch -- </option>
+                          <option value="vietnam">Việt Nam</option>
+                          <option value="america">America</option>
+                          <option value="australia">Australia</option>
+                          <option value="quatar">Quatar</option>
+                          <option value="japan">Japan</option>
+                        </select>
+                        <span class="form-message"></span>
+                      </div> -->
+                            
+                      <div class="form-group">
+                        <label for="password" class="form-label">Mật khẩu</label>
+                        <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                        <span class="form-message"></span>
+                      </div>
+                  
+                      <div class="form-group">
+                        <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+                        <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+                        <span class="form-message"></span>
+                      </div>
+
+                      <button class="form-submit">Đăng ký</button>
+            
+                    </form>                   
+                </div>
+        <!-- ========== Validate form ========== -->
+        <script src="assets/js/form.js"></script>
+        <script>
+            Validator({
+              form: '#form-1',
+              errorElement: '.form-message',
+              rules: [
+                // Validator.isRequired('#idstudent','Vui lòng nhập mã sinh viên'),
+                Validator.isRequired('#fullname', 'Mời bạn nhập trường này'),
+                Validator.isRequired('#email', 'Vui lòng nhập trường này'),
+                // Validator.isRequired('#province','Vui lòng chọn tỉnh thành phố'),
+                Validator.isEmail('#email','Vui lòng nhập email chính xác'),
+                Validator.isPassword('#password', 6),
+                Validator.isRequired('#password_confirmation','Vui lòng nhập trường này'),
+                Validator.isConfirmPassword('#password_confirmation', function(){
+                  return document.querySelector('#form-1 #password').value
+                },'Vui lòng nhập mật khẩu chính xác')
+                  // Validator.isNoteLength('#note',255),
+                // Validator.isRequired('input[type="radio"]','Vui lòng chọn giới tính'),
+                // Validator.isRequired('input[name="hobby"]','Vui lòng chọn sở thích')
+              ]
+            })
+            Validator({
+              form: '#form-2',
+              errorElement: '.form-message',
+              rules: [
+                Validator.isRequired('#email', 'Vui lòng nhập trường này'),
+                Validator.isEmail('#email','Vui lòng nhập email chính xác'),
+                Validator.isPassword('#password', 6),
+                Validator.isRequired('#password_confirmation','Vui lòng nhập trường này'),
+              ]
+            })
+            // Sign in
+            const btnSignin = document.querySelectorAll('.js-sign-in');
+            const formMain2 = document.querySelector('.js-main-form2');
+            const formChild2 = document.querySelector('.js-main-form2>.form');
+            const formMainClose2 = document.querySelector('.js-main-form-close2');
+           
+            // Get input elements;
+            const getInputElements2 = formMain2.querySelectorAll('.js-main-form2>.form>.form-group>.form-control');
+            // Hàm khi người dùng bấm vào nút Close ẩn form và reset error
+            // (Xóa class Open ra khỏi form main)
+            function resetError2() {
+                Array.from(getInputElements2).forEach( function(inputElement) {
+                    const errorElement = inputElement.parentElement.querySelector('.form-message');
+                    errorElement.innerText = '';
+                    errorElement.parentElement.classList.remove('invalid');
+                    const getInputElement = inputElement.querySelector('.form-control');
+                })
+            }
+            // Hàm khi người dùng bấm vào nút đăng ký hiện Form
+            // (Thêm class open vào form main)
+            function showSigninForm() {
+                formMain2.classList.add('open2');
+                resetError2();
+            }
+            function hideSigninForm() {
+                formMain2.classList.remove('open2');
+                resetError2();
+            }
+
+            for(const signup of btnSignin) {
+                signup.addEventListener('click', showSigninForm);
+            }
+            formMainClose2.addEventListener('click', hideSigninForm);
+            formMain2.addEventListener('click', hideSigninForm);
+            formChild2.addEventListener('click', function(event) {
+                event.stopPropagation();
+            })
+            // Click Sign-up
+            const btnSignUp = document.querySelectorAll('.js-sign-up');
+            const formMain = document.querySelector('.js-main-form');
+            const formChild = document.querySelector('.js-main-form>.form');
+            const formMainClose = document.querySelector('.js-main-form-close');
+            
+            // Get input elements;
+            const getInputElements = formMain.getElementsByTagName('input');
+            // Hàm khi người dùng bấm vào nút đăng ký hiện Form
+            // (Thêm class open vào form main)
+            function showSignupForm() {
+                formMain.classList.add('open');
+            }
+            // Hàm khi người dùng bấm vào nút Close ẩn form và reset error
+            // (Xóa class Open ra khỏi form main)
+            function resetError() {
+                Array.from(getInputElements).forEach( function(inputElement) {
+                    var errorElement = inputElement.parentElement.querySelector('.form-message');
+                    errorElement.innerText = '';
+                    errorElement.parentElement.classList.remove('invalid');
+                    inputElement.innerText = '';
+                })
+            }
+            function hideSignupForm() {
+                formMain.classList.remove('open');
+                resetError();
+            }
+
+            for(const signup of btnSignUp) {
+                signup.addEventListener('click', showSignupForm);
+            }
+            formMainClose.addEventListener('click', hideSignupForm);
+            formMain.addEventListener('click', hideSignupForm);
+            formChild.addEventListener('click', function(event) {
+                event.stopPropagation();
+            })
+            // Sự kiện khi Click vào nút Bạn chưa có tài khoản
+            const getAncor = document.querySelector('.link-sign-up');
+            function showLinkSignup() {
+                resetError2();
+                hideSigninForm();
+                showSignupForm();
+                resetError();
+            }
+            getAncor.addEventListener('click',showLinkSignup)
+          </script>
          <!--========== SCROLL UP ==========-->
         <a href="#" class="scrollup" id="scroll-up">
             <i class="ri-arrow-up-line scrollup__icon"></i>
