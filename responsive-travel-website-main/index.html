@@ -250,7 +250,7 @@
                             </div>
                         </div>
 
-                        <button class="button button--flex place__button">
+                        <button class="button button--flex place__button js-buy-ticket js-buy-ticket">
                             <i class="ri-arrow-right-line"></i>
                         </button>
                     </div>
@@ -272,7 +272,7 @@
                             </div>
                         </div>
 
-                        <button class="button button--flex place__button">
+                        <button class="button button--flex place__button js-buy-ticket">
                             <i class="ri-arrow-right-line"></i>
                         </button>
                     </div>
@@ -294,7 +294,7 @@
                             </div>
                         </div>
 
-                        <button class="button button--flex place__button">
+                        <button class="button button--flex place__button js-buy-ticket">
                             <i class="ri-arrow-right-line"></i>
                         </button>
                     </div>
@@ -316,7 +316,7 @@
                             </div>
                         </div>
 
-                        <button class="button button--flex place__button">
+                        <button class="button button--flex place__button js-buy-ticket">
                             <i class="ri-arrow-right-line"></i>
                         </button>
                     </div>
@@ -338,7 +338,7 @@
                             </div>
                         </div>
 
-                        <button class="button button--flex place__button">
+                        <button class="button button--flex place__button js-buy-ticket">
                             <i class="ri-arrow-right-line"></i>
                         </button>
                     </div>
@@ -359,7 +359,7 @@
                             </div>
                         </div>
 
-                        <button class="button button--flex place__button">
+                        <button class="button button--flex place__button js-buy-ticket">
                             <i class="ri-arrow-right-line"></i>
                         </button>
                     </div>
@@ -520,7 +520,8 @@
                                 <i class="ti-facebook brand-icon"></i>
                             </div>
                             <div class="not-member-link">
-                                <a href="#" class="link-sign-up">Bạn chưa có tài khoản</a>
+                                <a href="#" class="link-sign-up " style="color:green; ">Chưa có tài khoản?</a>
+                                <a href="# " class="forgot-pass " style="color:red ; ">Quên mật khẩu</a>
                             </div>
                            
                         </div>
@@ -578,6 +579,43 @@
             
                     </form>                   
                 </div>
+                <!-- --Button Buy Ticket-- -->
+    <div class="modal js-modal ">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close ">
+                <i class="ti-close "></i>
+            </div>
+
+            <header class="modal-header">
+                <i class="modal-heading-icon ti-bag "></i>Đặt Tour
+            </header>
+
+            <div class="modal-body ">
+                <label for="quantity " class="modal-label">
+                    <i class="ti-shopping-cart "></i>
+                    Số người du lịch
+                </label>
+                <input id="quantity " type="text " class="modal-input" placeholder="Điền số người?" required>
+
+
+                <label for="mail " class="modal-label ">
+                    <i class="ti-user "></i>
+                    Gửi vé Tour đến?
+                </label>
+                <input id="mail " type="email " class="modal-input " placeholder="Điền Email? " required>
+
+                <button id="buy-tickets">Thanh Toán
+                    <i class="ti-check"></i>
+                </button>
+            </div>
+            <footer class="modal-footer">
+                <p class="modal-help">Cần <a href=" ">hỗ trợ?</a></p>
+            </footer>
+        </div>
+
+    </div>
+
+    <!-- -- End buy ticket-- -->
         <!-- ========== Validate form ========== -->
         <script src="assets/js/form.js"></script>
         <script>
@@ -706,5 +744,39 @@
 
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
+        <!-- ========== LOGIN ADMIN =========== -->
+        <script src="assets/js/app.js"></script>
+         <!-- --JS BUY TICKET-- -->
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalClose = document.querySelector('.js-modal-close')
+        const modalContainer = document.querySelector('.js-modal-container')
+
+
+        //Hàm hiển thị modal mua vé(thêm class open vào Modal)
+        function showbuyTickets() {
+            modal.classList.add('open')
+
+        }
+        //Hàm hiển thị Hide(Ẩn đi mua vé)
+        function closeShowBuyTicket() {
+            modal.classList.remove('open')
+        }
+
+        //Lặp qua từng thẻ Button và nghe hành vi click
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showbuyTickets)
+        }
+
+        //Nghe hành vi close vào Button close
+        modalClose.addEventListener('click', closeShowBuyTicket)
+        modal.addEventListener('click', closeShowBuyTicket)
+
+        modalContainer.addEventListener('click', function(event) {
+            event.stopPropagation()
+
+        })
+    </script>
     </body>
 </html>
