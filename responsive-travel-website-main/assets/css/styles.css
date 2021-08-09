@@ -1166,3 +1166,26 @@ input.modal-input {
       transform: translateY(0px);
   }
 }
+/* Css role  */
+/* .nav__item.role>button{
+  color: rgb(217, 47, 8);
+} */
+.nav__item.role.show {
+  display: block !important;
+  color: rgb(217, 47, 8);
+}
+.nav__item.role {
+  display: none;
+}
+/* Discount */
+.place__price.discount {
+  color: #ff3737;
+  font-weight: bold;
+}
+.ri-star-line.place__rating-icon {
+  color: yellow;
+}
+.time-tour {
+  margin-right: 32px ;
+  font-size: 13px;
+}
