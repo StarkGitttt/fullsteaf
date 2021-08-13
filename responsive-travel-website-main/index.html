@@ -4,8 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
-
+        <!-- <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+        Import Boostrap css, js, font awesome here
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+        <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+         <!-- DataTables -->
+        <!-- <link rel="stylesheet" 
+        type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css"> 
+        <script type="text/javascript" 
+        charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js">    
+        </script> -->
         <!--=============== REMIXICONS ===============-->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         
@@ -16,6 +29,10 @@
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
         <link rel="stylesheet" href="assets/css/form.css">
+        <link rel="stylesheet" href="assets/css/formbooking.css">
+         <!-- Send mail -->
+         <script src="https://smtpjs.com/v3/smtp.js">
+         </script>
         <title>Website Travel</title>
     </head>
     <body>
@@ -49,6 +66,16 @@
                         </li>
                         <li class="nav__item role ">
                             <button href="assets/form/form-sign-up.php" class="nav__link">                      
+                            </button>
+                        </li>
+                        <li class="nav__item list-booked">
+                            <button  class="nav__link show-list-booked">
+                                <i class="ti-package"></i>                    
+                            </button>
+                        </li>
+                        <li class="nav__item list-booked-user">
+                            <button  class="nav__link show-list-booked-user">
+                                <i class="ti-shopping-cart"></i>                    
                             </button>
                         </li>
                     </ul>
@@ -536,8 +563,8 @@
                                 <i class="ti-facebook brand-icon"></i>
                             </div>
                             <div class="not-member-link">
-                                <a href="#" class="link-sign-up " style="color:green; ">Chưa có tài khoản?</a>
-                                <a href="# " class="forgot-pass " style="color:red ; ">Quên mật khẩu</a>
+                                <a href="#" class="link-sign-up" style="color:green; ">Chưa có tài khoản?</a>
+                                <a href="# " class="forgot-pass" style="color:red ; ">Quên mật khẩu</a>
                             </div>
                            
                         </div>
@@ -596,42 +623,181 @@
                     </form>                   
                 </div>
                 <!-- --Button Buy Ticket-- -->
-    <div class="modal js-modal ">
+    <div class="modal js-modal">
         <div class="modal-container js-modal-container">
             <div class="modal-close js-modal-close ">
-                <i class="ti-close "></i>
+                <i class="ti-close"></i>
             </div>
 
             <header class="modal-header">
-                <i class="modal-heading-icon ti-bag "></i>Đặt Tour
+                <i class="modal-heading-icon ti-bag"></i>Đặt Tour
             </header>
 
             <div class="modal-body ">
-                <label for="quantity " class="modal-label">
-                    <i class="ti-shopping-cart "></i>
+                <label for="quantity" class="modal-label">
+                    <i class="ti-shopping-cart"></i>
                     Số người du lịch
                 </label>
-                <input id="quantity " type="text " class="modal-input" placeholder="Điền số người?" required>
+                <input id="quantity" type="text" class="modal-input" placeholder="Điền số người?" required>
 
 
-                <label for="mail " class="modal-label ">
+                <label for="mail" class="modal-label">
                     <i class="ti-user "></i>
                     Gửi vé Tour đến?
                 </label>
-                <input id="mail " type="email " class="modal-input " placeholder="Điền Email? " required>
+                <input id="mail" type="email" class="modal-input" placeholder="Điền Email?" required>
 
-                <button id="buy-tickets">Thanh Toán
+                <button id="buy-tickets">Đặt chỗ
                     <i class="ti-check"></i>
                 </button>
             </div>
             <footer class="modal-footer">
-                <p class="modal-help">Cần <a href=" ">hỗ trợ?</a></p>
+                <p class="modal-help"> <a href=" ">Cần hỗ trợ?</a></p>
             </footer>
         </div>
 
     </div>
 
     <!-- -- End buy ticket-- -->
+    <!-- Form Booking -->
+    <div class="modal-booking js-modal-booking ">
+        <div class="modal-container-booking js-modal-container-booking">
+            <div class="modal-close-booking js-modal-close-booking">
+                <i class="ti-close "></i>
+            </div>
+
+            <header class="modal-header-booking">
+                <i class="modal-heading-icon ti-user "></i>Danh sách khách hàng đã đặt
+            </header>
+
+            <div class="modal-body-booking">
+               <table border="1" id="table-booking">
+                   <thead>
+                       <th scope="col" class="table-booking-heading">
+                           THÔNG TIN
+                        <br/>
+                        <br/>
+                        <i class="ti-id-badge" style="color: #009688;"></i>
+                       </th>
+                       <th scope="col" class="table-booking-heading">
+                           SỐ NGƯỜI
+                        <br/>
+                        <br/>
+                        <i class="ti-user" style="color: #009688;"></i>
+                        </th>
+                        <th scope="col" class="table-booking-heading">
+                            ĐỊA ĐIỂM
+                        <br/>
+                        <br/>
+                        <i class="ti-map-alt" style="color: #009688;"></i>
+                        </th>
+                       <th scope="col" class="table-booking-heading">
+                           GIÁ TIỀN
+                        <br/>
+                        <br/>
+                        <i class="ti-money" style="color: #009688;"></i>
+                       </th>
+                       <th scope="col" class="table-booking-heading">
+                        TRẠNG THÁI
+                        <br/>
+                        <br/>
+                        <i class="ti-reload" style="color: #009688;"></i>                   
+                     </th>
+                   </thead>
+                   <tbody id="body-table">
+                       <!-- <tr>
+                           <th class="table-booking-body information">1</th>
+                           <th class="table-booking-body people">1</th>
+                           <th class="table-booking-body place">1</th>
+                           <th class="table-booking-body total">1</th>
+                           <th class="table-booking-body edit">
+                            <button id="remove" value="Xóa" type="button">
+                                <i class="ti-cut"></i>
+                           </th>
+                       </tr>                       -->
+                   </tbody>
+               </table>
+               <button id="buy-tickets2">Duyệt tất cả
+                <i class="ti-check"></i>
+                </button>
+            </div>
+            <footer class="modal-footer-booking">
+                <!-- <p class="modal-help"><a href="#">Cần hỗ trợ?</a></p> -->
+                <!-- <input type="text" placeholder="infor" class="infor">
+                <input type="text" placeholder="number" class="number">
+                <input type="text" placeholder="money" class="money">
+                <button class="btn-del">
+                    <i class="ti-cut"></i>
+                </button> -->
+            </footer>
+        </div>
+
+    </div>
+    <!-- Form Booking User -->
+        <div class="modal-booking-user js-modal-booking-user ">
+            <div class="modal-container-booking-user js-modal-container-booking-user">
+                <div class="modal-close-booking-user js-modal-close-booking-user">
+                    <i class="ti-close "></i>
+                </div>
+
+                <header class="modal-header-booking-user">
+                    <i class="modal-heading-icon ti-user "></i>Danh sách các tour đã đặt
+                </header>
+
+                <div class="modal-body-booking-user">
+                <table border="1" id="table-booking-user">
+                    <thead>
+                        <th scope="col" class="table-booking-heading">
+                            THÔNG TIN
+                            <br/>
+                            <br/>
+                            <i class="ti-id-badge" style="color: #35a5e5;"></i>
+                        </th>
+                        <th scope="col" class="table-booking-heading">
+                            SỐ NGƯỜI
+                            <br/>
+                            <br/>
+                            <i class="ti-user" style="color: #35a5e5;"></i>
+                            </th>
+                            <th scope="col" class="table-booking-heading">
+                                ĐỊA ĐIỂM
+                            <br/>
+                            <br/>
+                            <i class="ti-map-alt" style="color: #35a5e5;"></i>
+                            </th>
+                        <th scope="col" class="table-booking-heading">
+                            GIÁ TIỀN
+                            <br/>
+                            <br/>
+                            <i class="ti-money" style="color: #35a5e5;"></i>
+                        </th>
+                        <th scope="col" class="table-booking-heading">
+                            CHỈNH SỬA
+                            <br/>
+                            <br/>
+                            <i class="ti-settings" style="color: #35a5e5;"></i>                   
+                        </th>
+                    </thead>
+                    <tbody id="body-table-user">
+                
+                    </tbody>
+                </table>
+                <button id="buy-tickets3">ĐẶT TOUR
+                    <i class="ti-check"></i>
+                    </button>
+                </div>
+                <footer class="modal-footer-booking">
+                    <!-- <p class="modal-help"><a href="#">Cần hỗ trợ?</a></p> -->
+                    <!-- <input type="text" placeholder="infor" class="infor">
+                    <input type="text" placeholder="number" class="number">
+                    <input type="text" placeholder="money" class="money">
+                    <button class="btn-del">
+                        <i class="ti-cut"></i>
+                    </button> -->
+                </footer>
+            </div>
+
+        </div>
         <!-- ========== Validate form ========== -->
         <script src="assets/js/form.js"></script>
         <script>
@@ -749,6 +915,9 @@
             }
             getAncor.addEventListener('click',showLinkSignup)
           </script>
+          <!-- Script Form Booking -->
+          <script src="assets/js/formbooking.js"></script>
+          
          <!--========== SCROLL UP ==========-->
         <a href="#" class="scrollup" id="scroll-up">
             <i class="ri-arrow-up-line scrollup__icon"></i>
@@ -795,6 +964,9 @@
             event.stopPropagation()
 
         })
+      
     </script>
+    <!-- ============== Alert Message ============= -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </body>
 </html>

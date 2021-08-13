@@ -1,0 +1,372 @@
+
+  .modal-booking {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 999;
+  }
+  
+  .modal-booking.open {
+    display: flex;
+  }
+  
+  .modal-container-booking {
+    background: white;
+    width: 60%;
+    max-width: calc(100%-32px);
+    min-height: 150px;
+    position: relative;
+    animation: modalFadein ease 1s;
+  }
+  
+  header.modal-header-booking {
+    display: flex;
+    background: #009688;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+  
+  .modal-heading-icon {
+    margin-right: 15px;
+  }
+  
+  .modal-close-booking {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 16px;
+    cursor: pointer;
+  }
+  
+  .modal-close-booking:hover {
+    opacity: 0.8;
+  }
+  
+  .modal-body-booking {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color:black;
+  }
+  
+  .modal-label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  input.modal-input {
+    border: 1px solid #CCC;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  #buy-tickets {
+    background: #009688;
+    color: #fff;
+    border: none;
+    width: 65%;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  #buy-tickets:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  
+  .modal-footer-booking {
+    padding: 16px;
+    text-align: right;
+  }
+  
+  .modal-footer-booking a {
+    color: #2196f3;
+  }
+  
+  @keyframes modalFadein {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+  #table-booking {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 0 auto;
+  }
+  .table-booking-heading,.table-booking-body {
+      padding: 15px;     
+  }
+  .ti-user {
+      font-size: 20px;
+  }
+  .ti-id-badge {
+      font-size: 26px;
+  }
+  .ti-money {
+    font-size: 20px;
+  }
+  .ti-settings {
+    font-size: 20px;
+  }
+  .list-booked.list-show {
+    display: block;
+  }
+  .list-booked {
+      display: none
+  }
+  .list-booked-user.list-show {
+    display: block;
+  }
+  .list-booked-user {
+    display: none;
+  }
+ /* Form Success */
+ .modal-success {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  
+  .modal-success.open {
+    display: flex;
+  }
+  
+  .modal-container-success {
+    background: white;
+    width: 60%;
+    max-width: calc(100%-32px);
+    min-height: 150px;
+    position: relative;
+    animation: modalFadein ease 1s;
+  }
+  
+  header.modal-header-success {
+    display: flex;
+    background: #009688;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+  
+  .modal-heading-icon {
+    margin-right: 15px;
+  }
+  
+  .modal-close-success {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 16px;
+    cursor: pointer;
+  }
+  
+  .modal-close-success:hover {
+    opacity: 0.8;
+  }
+  
+  .modal-body-success {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color:black;
+  }
+  #buy-tickets {
+    background: #009688;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+  }
+  #buy-tickets2 {
+    margin-top: 10px;
+    background: #009688;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    padding: 15px;
+  }
+  
+  #buy-tickets:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  /* Icon xóa */
+  button#remove {
+      background: none;
+  }
+  .ti-cut {
+      font-size: 22px;
+      padding: 10px;
+      opacity: 0.8;
+  }
+  .ti-cut:hover {
+      opacity: 1;
+  }
+  .ti-map-alt {
+      font-size: 22px;
+  }
+  /* Form booking user */
+  .modal-booking-user {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 999;
+  }
+  
+  .modal-booking-user.open {
+    display: flex;
+  }
+  
+  .modal-container-booking-user {
+    background: white;
+    width: 60%;
+    max-width: calc(100%-32px);
+    min-height: 150px;
+    position: relative;
+    animation: modalFadein ease 1s;
+  }
+  
+  header.modal-header-booking-user {
+    display: flex;
+    background: #009688;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+  
+  .modal-heading-icon {
+    margin-right: 15px;
+  }
+  
+  .modal-close-booking-user {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 16px;
+    cursor: pointer;
+  }
+  
+  .modal-close-booking-user:hover {
+    opacity: 0.8;
+  }
+  
+  .modal-body-booking-user {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color:black;
+  }
+  
+  .modal-label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  input.modal-input {
+    border: 1px solid #CCC;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  #buy-tickets3 {
+    margin-top: 10px;
+    background: #009688;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    padding: 15px;
+  }
+  
+  #buy-tickets3:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  
+  .modal-footer-booking {
+    padding: 16px;
+    text-align: right;
+  }
+  
+  .modal-footer-booking a {
+    color: #2196f3;
+  }
+  
+  @keyframes modalFadein {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+  #table-booking-user {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 0 auto;
+  }
+  .table-booking-heading,.table-booking-body {
+      padding: 7px;     
+  }
+  .waiting,.ti-timer {
+    color: red;
+  }
+  .waiting.success {
+    color: #03a9f4
+  }
+  .ti-check-box {
+    color: #03a9f4;
+  }
+  
+  

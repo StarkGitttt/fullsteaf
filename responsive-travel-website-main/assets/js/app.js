@@ -11,8 +11,9 @@ var formLogin = document.getElementById('form-2');
 // Get Role
 var role = document.querySelector('.nav__item.role');
 var getBtn = role.querySelector('.nav__link');
-// Hide Form
-
+// Show Form Booking
+var formBookingAdmin = document.querySelector('.list-booked');
+var formBookingUser = document.querySelector('.list-booked-user');
 if (formLogin.attachEvent) {
     formLogin.attachEvent('submit', onFormSubmit);
 } else {
@@ -23,16 +24,35 @@ function onFormSubmit(e) {
     var username = inputUser.value;
     var password = inputPassword.value;
     if (username == CORRECT_USER && password == CORRECT_PASS) {
-        alert("Đăng nhập thành công!! Chào Admin");
+        swal({
+                title: "Đăng nhập thành công!",
+                text: "Chào, ADMIN!",
+                icon: "success",
+                button: "ĐÓNG!",
+            });
         role.classList.add('show');
         getBtn.innerHTML = 'ADMIN'
+        formBookingAdmin.classList.add('list-show');
+        formBookingUser.classList.remove('list-show');
         // hideSigninForm();
     }else if(username == userName && password == userPassword){
-        alert("Đăng nhập thành công!! Chào User");
+        swal({
+            title: "Đăng nhập thành công!",
+            text: "Chào, USER!",
+            icon: "success",
+            button: "ĐÓNG!",
+        });
         role.classList.add('show');
         getBtn.innerHTML = 'User'
         // hideSigninForm();
+        formBookingUser.classList.add('list-show');
+        formBookingAdmin.classList.remove('list-show');
     }else {
-        alert("Thất bại trong quá trình đăng nhập!!!")
+        swal({
+            title: "Đăng nhập thất bại!",
+            text: "Vui lòng kiểm tra lại thông tin!",
+            icon: "error",
+            button: "ĐÓNG!",
+          });
     }
 }

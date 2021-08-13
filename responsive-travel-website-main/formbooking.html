@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/formbooking.css">
+    <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
+    <title>Form Booking</title>
+</head>
+<body>
+
+    <div class="modal js-modal ">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close ">
+                <i class="ti-close "></i>
+            </div>
+
+            <header class="modal-header">
+                <i class="modal-heading-icon ti-user "></i>Danh sách khách hàng đã đặt
+            </header>
+
+            <div class="modal-body ">
+               <table border="1" id="table-booking">
+                   <thead>
+                       <th class="table-booking-heading">
+                           THÔNG TIN LIÊN HỆ
+                        <br/>
+                        <br/>
+                        <i class="ti-id-badge"></i>
+                       </th>
+                       <th class="table-booking-heading">
+                           SỐ NGƯỜI
+                        <br/>
+                        <br/>
+                        <i class="ti-user"></i>
+                       </th>
+                       <th class="table-booking-heading">
+                           GIÁ TIỀN
+                        <br/>
+                        <br/>
+                        <i class="ti-money"></i>
+                       </th>
+                       <th class="table-booking-heading">
+                        CHỈNH SỬA
+                        <br/>
+                        <br/>
+                        <i class="ti-settings"></i>                   
+                     </th>
+                   </thead>
+                   <tbody>
+                       <tr>
+                           <th class="table-booking-body information">123</th>
+                           <th class="table-booking-body people">123</th>
+                           <th class="table-booking-body total">123</th>
+                           <th class="table-booking-body edit">123</th>
+                       </tr>
+                       
+                   </tbody>
+               </table>
+            </div>
+            <footer class="modal-footer">
+                <!-- <p class="modal-help"><a href="#">Cần hỗ trợ?</a></p> -->
+                <!-- <input type="text" placeholder="infor" class="infor">
+                <input type="text" placeholder="number" class="number">
+                <input type="text" placeholder="money" class="money">
+                <button class="btn-del">
+                    <i class="ti-cut"></i>
+                </button> -->
+            </footer>
+        </div>
+
+    </div>
+    <!-- <script>
+        var getInfor = document.querySelector('.infor');
+        var getNumber = document.querySelector('.number');
+        var getMoney = document.querySelector('.money');
+        var getBtn = document.querySelector('.btn-del');
+        // Table
+        getBtn.onclick = function(){
+            var thInfor = document.querySelector('.information');
+            var thPeople = document.querySelector('.people');
+            var thTotal = document.querySelector('.total');
+            var thEdit = document.querySelector('.edit');
+            thInfor.innerHTML = `${getInfor.value}`
+        }
+    </script> -->
+</body>
+</html>
